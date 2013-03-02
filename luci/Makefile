@@ -18,7 +18,7 @@ PKG_BUILD_PARALLEL:=0
 ifeq ($(USELOCAL),1)
   PKG_VERSION:=0.11+svn
 else
-  PKG_SOURCE_URL:=git://github.com/shenrui01/luci-0.11.git
+  PKG_SOURCE_URL:=git://github.com/prochip/luci-0.11.git
   ifeq ($(DUMP),)
     PKG_REV:=$(shell LC_ALL=C svn info $(CURDIR) | sed -ne's/^Revision: //p')
     PKG_VERSION:=0.11+svn$(PKG_REV)
